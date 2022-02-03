@@ -1,16 +1,16 @@
 function Main (){
   //
-  const form = document.querySelector('.form');
+  const primaryForm = document.querySelector('#primary-form');
   //
   const pessoas = [];
   //
   function receivesData(Event){
-    Event.preventDefault();
+    Event.preventDefault()
 
-    const name = form.querySelector('#name');
-    const surname = form.querySelector('#surname');
-    const height = form.querySelector('#height');
-    const width = form.querySelector('#width');
+    const name = primaryForm.querySelector('#name');
+    const surname = primaryForm.querySelector('#surname');
+    const height = primaryForm.querySelector('#height');
+    const width = primaryForm.querySelector('#width');
     //
     pessoas.push({
       name: name.value,
@@ -20,6 +20,6 @@ function Main (){
     })
     console.log(pessoas)
   };
-  form.addEventListener('submit', receivesData);
+  primaryForm.addEventListener('submit', receivesData);
 };
 Main();
